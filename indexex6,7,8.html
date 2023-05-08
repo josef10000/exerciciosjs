@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de botões para mudar cor do texto e do fundo</title>
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+		body {
+			background-color: white;
+			color: black;
+		}
+	</style>
+	<script>
+		function textobranco() {
+			var p = document.getElementById("text");
+			p.style.color = "white";
+		}
+
+		function textopreto() {
+			var p = document.getElementById("text");
+			p.style.color = "black";
+		}
+
+		function fundobranco() {
+			var body = document.getElementsByTagName("body")[0];
+			body.style.backgroundColor = "white";
+		}
+
+		function fundopreto() {
+			var body = document.getElementsByTagName("body")[0];
+			body.style.backgroundColor = "black";
+		}
+
+        
+		function aumentar() {
+			var h1 = document.getElementsByTagName("h1")[0];
+			var currentSize = parseInt(window.getComputedStyle(h1).fontSize);
+			h1.style.fontSize = (currentSize + 1) + "px";
+		}
+
+		function diminuir() {
+			var h1 = document.getElementsByTagName("h1")[0];
+			var currentSize = parseInt(window.getComputedStyle(h1).fontSize);
+			h1.style.fontSize = (currentSize - 1) + "px";
+		}
+
+		function toUpperCase() {
+			var p = document.getElementById("text");
+			p.textContent = p.textContent.toUpperCase();
+		}
+
+		function toLowerCase() {
+			var p = document.getElementById("text");
+			p.textContent = p.textContent.toLowerCase();
+		}
+	</script>
+</head>
+<body>
+	<h1>Botões para mudar cor do texto e do fundo</h1>
+	<p id="text">Mudar cores clicando nos botões abaixo.</p>
+	<button onclick="textobranco()">Texto Branco</button>
+	<button onclick="textopreto()">Texto Preto</button>
+	<button onclick="fundobranco()">Fundo Branco</button>
+	<button onclick="fundopreto()">Fundo Preto</button>
+    <button onclick="aumentar()">+</button>
+	<button onclick="diminuir()">-</button>
+	<button onclick="toUpperCase()">Maiúscula</button>
+	<button onclick="toLowerCase()">Minúscula</button>
+</body>
+
+<div>
+	<nav>
+		<ul>
+		  <li><a href="indexex1.html">Exercicio 1</a></li>
+		  <li><a href="indexec2.html">xercicio 2</a></li>
+		  <li><a href="indexex3.html">Exercicio 3</a></li>
+		  <li><a href="indexex4.html">Execicio 4</a></li>
+		  <li><a href="indexex5.html">Exercicio 5</a></li>
+		  <li><a href="index.html">Inicio</a></li>
+		  <li><a href="indexex9.html">Exercicio 9</a></li>
+		  <li><a href="indexex10.html">Exerciico 10</a></li>
+
+		</ul>
+	  </nav>
+</div>
+</html>

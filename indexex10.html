@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de Cliente</title>
+  <link rel="stylesheet" href="style.css">
+  
+
+	<h2>Cadastro de Cliente</h2>
+
+<form>
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome" required><br>
+
+  <label for="pessoa-fisica">Pessoa Física</label>
+  <input type="radio" id="pessoa-fisica" name="tipo-pessoa" value="fisica">
+  <label for="pessoa-juridica">Pessoa Jurídica</label>
+  <input type="radio" id="pessoa-juridica" name="tipo-pessoa" value="juridica">
+
+  <div id="cpf-group">
+    <label for="cpf">CPF:</label><br>
+    <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" disabled><br>
+
+    <label for="data-nascimento">Data de Nascimento:</label><br>
+    <input type="text" id="data-nascimento" name="data-nascimento" pattern="\d{2}/\d{2}/\d{4}" disabled><br>
+  </div>
+
+  <div id="cnpj-group">
+    <label for="cnpj">CNPJ:</label><br>
+    <input type="text" id="cnpj" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" disabled><br>
+  </div>
+
+  <label for="endereco">Endereço:</label><br>
+  <input type="text" id="endereco" name="endereco" required><br>
+
+  <label for="telefone">Telefone:</label><br>
+  <input type="text" id="telefone" name="telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" required><br>
+
+  <label for="cep">CEP:</label><br>
+  <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" required><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <button type="submit">Cadastrar</button>
+</form>
+
+<script>
+  const pessoaFisica = document.getElementById('pessoa-fisica');
+  const pessoaJuridica = document.getElementById('pessoa-juridica');
+  const cpfGroup = document.getElementById('cpf-group');
+  const cnpjGroup = document.getElementById('cnpj-group');
+  const cpfInput = document.getElementById('cpf');
+  const dataNascimentoInput = document.getElementById('data-nascimento');
+  const cnpjInput = document.getElementById('cnpj');
+
+  pessoaFisica.addEventListener('change', function () {
+    cpfGroup.style.display = 'block';
+    cnpjGroup.style.display = 'none';
+    cpfInput.removeAttribute('disabled');
+    dataNascimentoInput.removeAttribute('disabled');
+    cnpjInput.setAttribute('disabled', 'true');
+  });
+
+  pessoaJuridica.addEventListener('change', function () {
+    cpfGroup.style.display = 'none';
+    cnpjGroup.style.display = 'block';
+    cnpjInput.removeAttribute('disabled');
+    cpfInput.setAttribute('disabled', 'true');
+    dataNascimentoInput.setAttribute('disabled', 'true');
+  });
+</script>
+
+<div>
+  <nav>
+    <ul>
+      <li><a href="indexex1.html">Exercicio 1</a></li>
+      <li><a href="indexec2.html">Exercicio 2</a></li>
+      <li><a href="indexex3.html">Exercicio 3</a></li>
+      <li><a href="indexex4.html">Execicio 4</a></li>
+      <li><a href="indexex5.html">Exercicio 5</a></li>
+      <li><a href="indexex6,7,8.html">Exercicio 6-7-8</a></li>
+      <li><a href="indexex9.html">Exercicio 9</a></li>
+      <li><a href="index.html">Inicio</a></li>
+
+    </ul>
+    </nav>
+</div>

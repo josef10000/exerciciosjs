@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      a {
+        padding: 10px;
+        border: 1px solid black;
+        text-decoration: none;
+        color: black;
+        background-color: lightgray;
+      }
+      a:hover {
+        background-color: gray;
+        color: white;
+      }
+    </style>
+
+    <script>
+      function validarFormulario() {
+        var login = document.getElementById("login").value;
+        var senha = document.getElementById("senha").value;
+        var confirmarSenha = document.getElementById("confirmarSenha").value;
+
+        if (login == "" || senha == "" || confirmarSenha == "") {
+          alert("Todos os campos são obrigatórios!");
+          return false;
+        }
+
+        if (senha.length < 6 || senha.length > 10) {
+          alert("A senha deve possuir entre 6 e 10 caracteres!");
+          return false;
+        }
+
+        if (senha != confirmarSenha) {
+          alert("A senha e a confirmação de senha devem ser iguais!");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Cadastro de Usuário</h1>
+    <form onsubmit="return validarFormulario()">
+      <label for="login">Login:</label>
+      <input type="text" id="login" name="login"><br><br>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha"><br><br>
+
+      <label for="confirmarSenha">Confirmar Senha:</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha"><br><br>
+
+      <input type="submit" value="Cadastrar">
+    </form>
+
+    <div>
+      <nav>
+        <ul>
+          <li><a href="indexex1.html">Exercicio 1</a></li>
+          <li><a href="indexec2.html">Exercicio 2</a></li>
+          <li><a href="indexex3.html">Exercicio 3</a></li>
+          <li><a href="indexex4.html">Execicio 4</a></li>
+          <li><a href="indexex5.html">Exercicio 5</a></li>
+          <li><a href="indexex6,7,8.html">Exercicio 6-7-8</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="indexex10.html">Exerciico 10</a></li>
+    
+        </ul>
+        </nav>
+    </div>
+  </body>
+</html>

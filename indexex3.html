@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+	<title>Exemplo de seleção de cor</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script>
+		function setBgColor(color) {
+			document.body.style.backgroundColor = color;
+		}
+	</script>
+</head>
+<body>
+	<h1>Escolha uma cor:</h1>
+	<form>
+		<select onchange="setBgColor(this.value)">
+			<option value="">Selecione uma cor...</option>
+			<option value="red">Vermelho</option>
+			<option value="green">Verde</option>
+			<option value="blue">Azul</option>
+			<option value="yellow">Amarelo</option>
+		</select>
+		<br><br>
+		<input type="radio" name="color" value="red" onclick="setBgColor(this.value)">Vermelho<br>
+		<input type="radio" name="color" value="green" onclick="setBgColor(this.value)">Verde<br>
+		<input type="radio" name="color" value="blue" onclick="setBgColor(this.value)">Azul<br>
+		<input type="radio" name="color" value="yellow" onclick="setBgColor(this.value)">Amarelo<br>
+	</form>
+
+	<div>
+		<nav>
+			<ul>
+			  <li><a href="indexex1.html">Exercicio 1</a></li>
+			  <li><a href="indexec2.html">Exercicio 2</a></li>
+			  <li><a href="index.html">Inicio</a></li>
+			  <li><a href="indexex4.html">Execicio 4</a></li>
+			  <li><a href="indexex5.html">Exercicio 5</a></li>
+			  <li><a href="indexex6,7,8.html">Exercicio 6-7-8</a></li>
+			  <li><a href="indexex9.html">Exercicio 9</a></li>
+			  <li><a href="indexex10.html">Exerciico 10</a></li>
+	
+			</ul>
+		  </nav>
+	</div>
+</body>
+</html>

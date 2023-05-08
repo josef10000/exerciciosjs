@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de seleção de itens com checkbox</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script>
+		function checkItems() {
+			var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+			if (checkboxes.length >= 2) {
+				document.getElementById("submit-btn").disabled = false;
+			} else {
+				document.getElementById("submit-btn").disabled = true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Selecione pelo menos dois itens:</h1>
+	<form>
+		<input type="checkbox" name="item" value="item1" onchange="checkItems()">Item 1<br>
+		<input type="checkbox" name="item" value="item2" onchange="checkItems()">Item 2<br>
+		<input type="checkbox" name="item" value="item3" onchange="checkItems()">Item 3<br>
+		<input type="checkbox" name="item" value="item4" onchange="checkItems()">Item 4<br>
+		<br>
+		<button id="submit-btn" type="submit" disabled>Enviar</button>
+	</form>
+
+	<div>
+		<nav>
+			<ul>
+			  <li><a href="indexex1.html">Exercicio 1</a></li>
+			  <li><a href="indexec2.html">Exercicio 2</a></li>
+			  <li><a href="indexex3.html">Exercicio 3</a></li>
+			  <li><a href="indexex4.html">Execicio 4</a></li>
+			  <li><a href="index.html">Inicio</a></li>
+			  <li><a href="indexex6,7,8.html">Exercicio 6-7-8</a></li>
+			  <li><a href="indexex9.html">Exercicio 9</a></li>
+			  <li><a href="indexex10.html">Exerciico 10</a></li>
+	
+			</ul>
+		  </nav>
+	</div>
+</body>
+</html>
